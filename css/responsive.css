@@ -1,0 +1,125 @@
+@media (max-width: 991px) {
+    .app_fetured_item .app_item{
+        position: relative;
+        display: inline-block;
+    }
+    .app_item.item_two {
+        left: 61px;
+        top: -120px;
+    }
+    .app_item.item_one{
+        top: -100px;
+    }
+    .app_item.item_three{
+        top: -100px;
+        left: -70px;
+    }
+    .app_item.item_four{
+        top: -120px;
+        left: 70px;
+    }
+    .app_feature_info .app_featured_content{
+        padding-bottom: 0px;
+    }
+    .app_featured_area_two .app_feature_info .app_featured_content{
+        padding-left: 0;
+        padding-bottom: 0px;
+    }
+    .agency_featured_area .clients_bg_shape_right {
+        display: none;
+    }
+    .resized {
+        width: 300px;
+        height: auto;
+        /* margin: 0 auto; */
+    }
+        .shap.one,
+    .shap.two, .shap {
+        display: none
+    }
+    .app_featured_content .shap {
+        display: none
+    }
+
+    .app_featured_content .shap.one {
+        display: none
+    }
+
+    .app_featured_content .shap.two {
+        display: none
+    }
+
+    .app_featured_content .shap.three {
+        display: none
+    }
+
+    .app_featured_content .shap.four {
+        display: none
+    }
+    .breadcrumb_shap {
+        display: none
+    }
+    .agency_featured_item .agency_featured_content {
+        margin: 0 4px;
+    }
+    .agency_featured_area {
+        padding: 0;
+    }
+    .sign_info {
+        border: 25px solid #fff;
+        background: #f6f8fc;
+        padding: 40px 20px;
+        -webkit-box-shadow: 0 50px 100px 0 rgba(12, 0, 46, .05);
+        box-shadow: 50px 50px 100px 50px rgba(12, 0, 46, .05);
+        margin: 5px
+    }
+    .sec_pad {
+        padding: 70px 0px;
+    }
+    .f_size_34 {
+        font-size: 24px;
+    }
+    
+    
+}
+@media (max-width: 450px) {
+    .sign_info {
+        border: 5px solid #fff;
+        background: #f6f8fc;
+        padding: 30px 15px;
+        -webkit-box-shadow: 0 50px 100px 0 rgba(12, 0, 46, .05);
+        box-shadow: 50px 50px 100px 50px rgba(12, 0, 46, .05);
+        margin: 5px
+    }
+    .sec_pad {
+        padding: 70px 0px;
+    }
+    .f_size_30 {
+        font-size: 24px;
+        line-height: 35px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sign_info {
+        border: 10px solid #fff;
+        background: #f6f8fc;
+        padding: 50px 30px;
+        -webkit-box-shadow: 0 50px 100px 0 rgba(12, 0, 46, .05);
+        box-shadow: 50px 50px 100px 50px rgba(12, 0, 46, .05);
+        margin: 10px
+    }
+    .sec_pad {
+        padding: 70px 0px;
+    }
+    .f_size_30 {
+        font-size: 24px;
+        line-height: 35px;
+    }
+}
+@media (max-width: 576px) {
+    .f_size_30 {
+        font-size: 24px;
+        line-height: 35px;
+    }
+}
