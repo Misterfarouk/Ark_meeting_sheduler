@@ -1,13 +1,16 @@
 <?php
-   
-$selection = array(
-    'Ademola Ogunyemi', 'Halima Salawu',
-    'Atoro Busayo', 'Shonibare Oluwatimileyin',
-    
-);
+    $server = "localhost";
+    $username = "root";
+    $password = "";
+    $database = "meeting_scheduler";
 
-//Print out the array in a JSON format.
-header('Content-Type: application/json');
-echo json_encode($selection);
+    //create connection
+
+    $connection = mysqli_connect( $server, $username, $password, $database);
+
+    // Check connection
+    if (!$connection) {
+    die("Connection failed: " . mysqli_connect_error());
+    }
 
 ?>
