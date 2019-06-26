@@ -11,18 +11,23 @@
 </head>
 <body>
     <form class="text-center">
-        <select name="staff_selection" id="selection">
-            <option value="-" id="staff_selection">Loading</option>
-        </select>
+        <div class="form-group">
+            <select name="staff_selection" id="selection" class="form-control" onchange="ark()" >
+                <option value="-" id="staff_selection">Loading</option>
+            </select>
+        </div>  
 
-        <select name="Meeting_topic" id="topic">
-            <option value="-" id="staff_selection">Loading</option>
-        </select>
+        <div class="form-group">
+            <select name="topic_selection" id="topic" class="form-control">
+                <option value="-" id="topic_selection">Loading</option>
+            </select>
+        </div>
         
-        <!---<select name="Meeting_time" id="time">
-            <option value="-" id="Meeting_time">Loading</option>
-        </select>
-         -->
+        <div class="form-group">
+            <select name="Meeting_time" id="time" class="form-control" >
+                <option value="-" id="Meeting_time">Loading</option>
+            </select>
+        </div>
         
     </form>
 </body>
