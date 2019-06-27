@@ -1,3 +1,12 @@
 form{
-    margin-top: 350;
+    margin-top: 250;
+}
+#tpc{
+    display: none;
+}
+#tme{
+    display: none;
+}
+#book_meeting{
+    display: none;
 }

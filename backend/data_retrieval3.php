@@ -2,7 +2,7 @@
         require_once('meetingscheduler.php');
 
 
-    //meeting topic data retrieval
+    //meeting time data retrieval
         $time = "SELECT * FROM meeting_time";
         
         $time_results =  mysqli_query( $connection, $time);
