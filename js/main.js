@@ -20,6 +20,8 @@ $(document).ready(function(){
 
     });
     
+    
+    
     //function to hide and show
     $("#stff").on('change', function(e) {
         
@@ -29,10 +31,10 @@ $(document).ready(function(){
         $.ajax({
             url: './backend/topic_filter.php',
             type: 'post',
-            data: serializedData , //data: $(this).serialize(),
+            data: serializedData ,
             dataType: 'json',
             success: function(data){
-               // console.log("data:"+ JSON.parse(data));
+               
                 //staff selection
                 $.each(data, function(index, key){
                   
@@ -50,15 +52,20 @@ $(document).ready(function(){
 
     }); 
        
+
+    //TOPIC
     $("#tpc").on('change', function(e) {
+
+        var serializedData= $("#form_info").serialize();
+        console.log(serializedData);
 
         $.ajax({
             url: './backend/data_retrieval3.php',
-            type: 'get',
+            type: 'post',
+            data: serializedData ,
             dataType: 'json',
             success: function(data){
              
-                //staff selection
                 $.each(data, function(index, key){
     
                     var option = new Option(key.time, key.id);
@@ -66,14 +73,14 @@ $(document).ready(function(){
                      $("#time").append(option);
                 });
                     //Change the text of the default "loading" option.
-                    $('#Meeting_time').text('Please select a meeting time');
+                    $('#meeting_time').text('Please select a meeting time');
     
                 }
         });
 
         $('#tme').show();
         $(this).hide();
-        
+
     });
 
     $("#tme").on('change', function(e) {
