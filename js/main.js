@@ -11,7 +11,7 @@ $(document).ready(function(){
 
                 var option = new Option(key.staff_name, key.id);
                 console.log("Staff:"+ key.staff_name);
-                 $("#selection").append(option);
+                 $("#selection").append(option);giy
             });
                 //Change the text of the default "loading" option.
                 $('#staff_selection').text('Please select a staff');
@@ -108,7 +108,7 @@ $(document).ready(function(){
     
         var customer_name = $("input#name").val();
         var customer_email = $("input#email").val();
-        var amount = $("input#okc").val();
+        //var amount = $("input#okc").val();
 
         console.log(amount);
         payWithPaystack(customer_email, customer_name, amount);      
