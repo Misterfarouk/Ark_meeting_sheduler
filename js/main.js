@@ -11,7 +11,7 @@ $(document).ready(function(){
 
                 var option = new Option(key.staff_name, key.id);
                 console.log("Staff:"+ key.staff_name);
-                 $("#selection").append(option);giy
+                 $("#selection").append(option);
             });
                 //Change the text of the default "loading" option.
                 $('#staff_selection').text('Please select a staff');
@@ -97,7 +97,7 @@ $(document).ready(function(){
     });
 
 
-    var request;
+     var request;
 
 
     // Bind to the submit event of our form
@@ -105,28 +105,32 @@ $(document).ready(function(){
     
         // Prevent default posting of form - put here to work in case of errors
         event.preventDefault();
-    
-        var customer_name = $("input#name").val();
-        var customer_email = $("input#email").val();
-        //var amount = $("input#okc").val();
 
-        console.log(amount);
-        payWithPaystack(customer_email, customer_name, amount);      
+        var custom_name = $("input#name").val();
+        var custom_email = $("input#email").val();
+
+        console.log(custom_name);
+        console.log(custom_email);
+
+    
+        var amount = $("input#okc").val();
+
+       
+        payWithPaystack(custom_email, custom_name, amount);      
     }); 
     
     
     
         //paystack integration
-    function payWithPaystack(customer_email, customer_name, amt){
-                
-            
+    function payWithPaystack(custom_email, custom_name, amt){
+                 
         var handler = PaystackPop.setup({
         key: 'pk_test_cdcc421dda96b12747c881e87864b28dc25bc05b',
-        email: customer_email,
-        amount: amt,
+        email: custom_email,
+        amount: 1000000,
         currency: "NGN",
         ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
-        firstname: customer_name,
+        firstname: custom_name,
         lastname: '',
         // label: "Optional string that replaces customer email"
         metadata: {
@@ -140,7 +144,7 @@ $(document).ready(function(){
         },
         callback: function(response){
             alert('success. transaction ref is ' + response.reference);
-            perforDBUpdate(customer_email, customer_name, amt,  response.reference);
+            perforDBUpdate(custom_email, custom_name, amt,  response.reference);
         
         },
         onClose: function(){
@@ -152,7 +156,7 @@ $(document).ready(function(){
     
 });
 
-function  perforDBUpdate(customer_email, customer_name, amt, transaction_ref){
+function  perforDBUpdate(custom_email, custom_name, amt, transaction_ref){
 
     // setup some local variables
   var $form = $("#form_info");
@@ -212,8 +216,8 @@ function  perforDBUpdate(customer_email, customer_name, amt, transaction_ref){
   request.always(function () {
       // Reenable the inputs
       $inputs.prop("disabled", false);
-  });
 
 
+});
 
 }
