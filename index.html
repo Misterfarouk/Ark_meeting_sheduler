@@ -3,52 +3,74 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
     <script src="https://js.paystack.co/v1/inline.js"></script>
 
 </head>
-<body>
-    <form class="text-center" id="form_info">
-
-        <div  class="form-group">
-            <input type="text" placeholder="Name"  id="name" class="form-control" name="name" required>
+<body >
+    <div class="container">
+        <div class="wrapper-container">
+        <div class="row overflow">
+        
+        <div class="col-md-7 bigbox">
+            <div class="overlay">
+            <div>
+                <div>
+                <p class="okc">Need to have an important conversation with one of our staffs?</p>
+                
+                
+                <p>Schedule a meeting and we would get back to you immediately</p>
+                </div>
+                <div class="logo">
+                    <img src="images/logo.png" alt="logo" height="60px" width="200px"> 
+                </div>
+            </div>
+            </div>
         </div>
+        
+        
+        <div class="col-md-5 smallbox">
+        <form id="form_info">
 
-        <div  class="form-group">
-                <input type="email" placeholder="E-mail" id="email" class="form-control" name="email" required>
-        </div>
+            <h5>Fill the form below</h5>
+            <div  class="form-group">
+                <input type="text" placeholder="Name"  id="name" class="form-control" name="name" required>
+            </div>
 
-        <div id="submit" class="form-group">
-            <button type="button" class="btn btn-success">SUBMIT</button>
-        </div>
+            <div  class="form-group">
+                    <input type="email" placeholder="E-mail" id="email" class="form-control" name="email" required>
+            </div>
+                
+            <div id="stff" class="form-group">
+                <select name="staff_selection" id="selection" class="form-control" >
+                    <option value="-" id="staff_selection">Staff name</option>
+                </select>
+            </div>  
+
+            <div id="tpc"  class="form-group">
+                <select name="topic_selection" id="topic" class="form-control" >
+                    <option value="-" id="topic_selection">Topic</option>
+                </select>
+            </div>
             
-        <div id="stff" class="form-group">
-            <select name="staff_selection" id="selection" class="form-control" >
-                <option value="-" id="staff_selection"></option>
-            </select>
-        </div>  
+            <div id="tme" class="form-group">
+                <select name="meeting_time" id="time" class="form-control" >
+                    <option value="-" id="meeting_time">Time</option>
+                </select>
+            </div>
 
-        <div id="tpc"  class="form-group">
-            <select name="topic_selection" id="topic" class="form-control" >
-                <option value="-" id="topic_selection"></option>
-            </select>
+            <div id="book_meeting" class="text-center">
+                <button type="submit" class="btn btn-default">Book Meeting</button>
+            </div>
+            
+        </form>
         </div>
-        
-        <div id="tme" class="form-group">
-            <select name="meeting_time" id="time" class="form-control" >
-                <option value="-" id="meeting_time"></option>
-            </select>
+    </div>
         </div>
-        <!-- test -->
-
-        <div id="book_meeting">
-            <button type="submit" class="btn btn-success">Book Meeting</button>
-        </div>
-        
-        <!-- hahahah lanre -->
-    </form>
+    </div>
 </body>
 </html>
